@@ -5,6 +5,10 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const mongo = require('mongoose')
 
+// dotenv requires to be placed above all code
+dotenv.config()
+
+
 /* postgres db */
 const Pool = require("pg").Pool;
 
@@ -17,9 +21,6 @@ const pool = new Pool({
     },
 });
 module.exports = pool;
-
-// dotenv requires to be placed above all code
-dotenv.config()
 
 // Models
 const User = require('./models/user')
