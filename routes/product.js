@@ -70,9 +70,9 @@ router.post("/products", upload.single('photo'), async (req, res) => {
         {
           $set: {
             title: req.body.title,
-            price: req.body.price,
+            // price: req.body.price,
             category: req.body.categoryID,
-            // photo: req.file.location,
+            photo: req.file.location,
             // stockQuantity: req.body.stockQuantity,
             description: req.body.description,
             owner: req.body.ownerID
